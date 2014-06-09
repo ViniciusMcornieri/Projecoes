@@ -30,4 +30,16 @@ public class Superficie  {
         normal.setz(ax*by - ay*bx);
     }
     
+    public void aplicaTransf(Matriz transf){
+        for (Ponto3D ponto : vertices) {
+            ponto.mult(transf);
+        }
+    }
+    
+    public void coordHomog(){
+       for (Ponto3D ponto : vertices) {
+            ponto.coordHomog();
+        }
+    }
+    
 }

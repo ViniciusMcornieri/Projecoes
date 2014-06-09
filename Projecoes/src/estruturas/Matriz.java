@@ -68,7 +68,7 @@ public class Matriz {
         return result;
     }
 
-    public void transform(Matriz b) {
+    public void aplicaTransf(Matriz b) {
         float sum = 0;
         int i, j, k;
         if (linhas != b.colunas) {
