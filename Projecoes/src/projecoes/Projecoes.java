@@ -1,4 +1,5 @@
 package projecoes;
+
 import estruturas.*;
 
 public class Projecoes {
@@ -18,16 +19,24 @@ public class Projecoes {
         spf.calculaNormal();
         Perspectiva pf = new Perspectiva(spf, pv);
         pf.calculaMatriz();
-        System.out.println(""+pf.toString());
+        System.out.println("" + pf.toString());
         obj.aplicaTransf(pf);
         obj.coordHomog();
         obj.refletir();
         obj.viewport(640, 0, 480, 0);
         obj.visibilidade(pv);
         for (Ponto3D pt : obj.pontos) {
-            System.out.println("p"+ pt.toString());
+            System.out.println("p" + pt.toString());
         }
-        
+        //Imprimi Projeção
+        try {
+            Gapp myGapp = new Gapp();
+            myGapp.initComponents();
+            myGapp.setVisible(true);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
-    
+
 }
