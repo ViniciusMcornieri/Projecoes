@@ -42,4 +42,22 @@ public class Superficie  {
         }
     }
     
+    public void visibilidade(Ponto3D visao){
+        float vi,vj,vk;
+        vi = vertices.get(0).x() - visao.x();
+        vj = vertices.get(0).y() - visao.y();
+        vk = vertices.get(0).z() - visao.z();
+        
+
+        
+        float pEscalar = vi*normal.x()+vj*normal.y()+vk*normal.z();
+        float modV     = (float) Math.sqrt(vi*vi+vj*vj+vk*vk);
+        float modN     = (float) Math.sqrt(normal.x()*normal.x()+normal.y()*normal.y()+normal.z()*normal.z());
+        float cosTeta  = pEscalar / modV*modN;
+        if (cosTeta <= 0){
+            this.visibilidade = false;
+        }
+        
+    }
+    
 }
