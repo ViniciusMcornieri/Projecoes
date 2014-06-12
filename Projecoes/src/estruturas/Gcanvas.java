@@ -5,25 +5,23 @@ import java.awt.*;
 import javax.swing.*;
 
 class Gcanvas extends JPanel {
-
-    public void paintComponent(Graphics g, Objeto obj) {
+    public Objeto obj;
+    public Gcanvas(Objeto obj){
+        super();
+        this.obj = obj;
+    }
+    
+    
+    
+    public void paintComponent(Graphics g) {
         for (Superficie spf : obj.objeto) {
             if(spf.visibilidade){
                 this.paintSuperficie(g, spf);
             }
         }
-        //g.drawLine(800, 1, 1, 1);
-       //g.drawLine(50, 50, 50, 150);
-       /** g.drawLine(50, 150, 100, 100);
-       // g.drawLine(100, 100, 100, 150);
-       // g.drawLine(100, 150, 200, 150);
-        g.drawLine(200, 150, 200, 50);
-        g.drawLine(200, 50, 100, 50);
-        g.drawLine(100, 50, 100, 100);
-        g.drawLine(100, 100, 50, 50);
-        g.drawLine(200, 50, 250, 100);
-        g.drawLine(250, 100, 200, 150); **/
-    }//paintComponent
+        //paintSuperficie(g, obj.objeto.get(1));
+      
+    }
 
     public void paintSuperficie(Graphics g, Superficie spf) {
         for (int i = 0; i < spf.vertices.size()-1; i++) {
@@ -34,16 +32,5 @@ class Gcanvas extends JPanel {
             y2 = (int) spf.vertices.get(i+1).y();
             g.drawLine(x1, y1, x2, y2);
         }
-        //g.drawLine(800, 1, 1, 1);
-       //g.drawLine(50, 50, 50, 150);
-       /** g.drawLine(50, 150, 100, 100);
-       // g.drawLine(100, 100, 100, 150);
-       // g.drawLine(100, 150, 200, 150);
-        g.drawLine(200, 150, 200, 50);
-        g.drawLine(200, 50, 100, 50);
-        g.drawLine(100, 50, 100, 100);
-        g.drawLine(100, 100, 50, 50);
-        g.drawLine(200, 50, 250, 100);
-        g.drawLine(250, 100, 200, 150); **/
     }
-}//end of -- Gcanvas --------------------------------------------
+}

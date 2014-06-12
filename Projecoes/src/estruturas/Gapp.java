@@ -10,11 +10,11 @@ public class Gapp extends JFrame {
         setBackground(Color.white);
     }// constructor
 
-    public void initComponents() throws Exception {
+    public void initComponents(Objeto obj) throws Exception {
         setLocation(new java.awt.Point(0, 30));
         setSize(new java.awt.Dimension(800, 600));
         setTitle("Projeções");
-        getContentPane().add(new Gcanvas());
+        getContentPane().add(new Gcanvas(obj));
 
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent e) {
