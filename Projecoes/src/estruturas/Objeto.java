@@ -47,7 +47,7 @@ public class Objeto {
             yMin = Math.min(yMin, ponto.y());
             yMax = Math.max(yMax, ponto.y());
         }
-        yMax = 8;
+        //yMax = 8;
         float sx = (uMax - uMin) / (xMax - xMin);
         float sy = (vMax - vMin) / (yMax - yMin);
         

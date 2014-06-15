@@ -25,9 +25,7 @@ public class Gapp extends JFrame {
 
     void thisWindowClosing(java.awt.event.WindowEvent e) {
         // Close the window when the close box is clicked
-        setVisible(false);
         dispose();
-        System.exit(0);
     }//end - thisWindowClosing
 
 }//end of class -- Gapp -------------------------------------------
