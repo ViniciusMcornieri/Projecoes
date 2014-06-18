@@ -5,8 +5,8 @@ A linguagem utilizada foi java;
 Para a execução:
 - Execute o arquivo Projeções.jar localizado na diretório "Projecoes/dist/"
 - selecione um arquivo de entrada localizados em "Projecoes/data"
-- preenche os 3 pontos não-colineares do plano de projeção ou utilize os valores default;
-- selecione um ponto de vista;
+- preencha os 3 pontos não-colineares do plano de projeção ou utilize os valores default;
+- selecione um ponto de vista ou utilize o default(-20, -20, -50);
 - selecione o tipo de projeção (perspectiva ou paralela);
 - clique em visualizar;
 

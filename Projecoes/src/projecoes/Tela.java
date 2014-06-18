@@ -93,7 +93,7 @@ public class Tela extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Arquivo de Entrada", 0, 0, null, new java.awt.Color(73, 82, 90)));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Arquivo de Entrada", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(73, 82, 90))); // NOI18N
 
         jButton2.setText("Selecionar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -123,7 +123,7 @@ public class Tela extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opções de Projeção", 0, 0, null, new java.awt.Color(73, 82, 90)));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Opções de Projeção", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), new java.awt.Color(73, 82, 90))); // NOI18N
 
         jRadioButton1.setSelected(true);
         jRadioButton1.setText("Perspectiva");
@@ -140,13 +140,18 @@ public class Tela extends javax.swing.JFrame {
             }
         });
 
-        pvx.setText("0");
+        pvx.setText("-20");
+        pvx.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pvxActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("Ponto de Vista");
 
-        pvy.setText("0");
+        pvy.setText("-20");
 
-        pvz.setText("-1");
+        pvz.setText("-50");
 
         jLabel8.setText("a");
 
@@ -154,7 +159,7 @@ public class Tela extends javax.swing.JFrame {
 
         jLabel9.setText("b");
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Plano", 0, 0, null, java.awt.Color.darkGray));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Plano", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 0, 12), java.awt.Color.darkGray)); // NOI18N
 
         p3y.setText("1");
 
@@ -471,6 +476,10 @@ public class Tela extends javax.swing.JFrame {
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
          new nSobre().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void pvxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pvxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_pvxActionPerformed
 
     public void setText(String text){
         this.arqentrada.setText(text);
